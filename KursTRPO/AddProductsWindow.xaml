@@ -1,0 +1,30 @@
+﻿<Window x:Class="KursTRPO.AddProductsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursTRPO"
+        mc:Ignorable="d"
+        Title="Добавить товар" Height="490" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Height="464">
+            <Label Content="Название чая:" Margin="10"/>
+            <TextBox x:Name="NameProductTextBox" Width="200" Margin="10"/>
+
+            <Label Content="Тип чая:" Margin="10"/>
+            <TextBox x:Name="TypeProductTextBox" Width="200" Margin="10"/>
+
+            <Label Content="Цена чая:" Margin="10"/>
+            <TextBox x:Name="PriceTextBox" PreviewTextInput="PriceTextBox_PreviewTextInput" Width="200" Margin="10"/>
+
+            <Label Content="Количество:" Margin="10"/>
+            <TextBox x:Name="StockTextBox" PreviewTextInput="StockTextBox_PreviewTextInput"  Width="200" Margin="10"/>
+
+            <Label Content="Поставщик:" Margin="10"/>
+            <ComboBox x:Name="SupplierComboBox" DisplayMemberPath="NameSupplier" Text="{Binding SupplierId}" Width="200" />
+
+
+            <Button Content="Сохранить" Width="200" Margin="10" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
